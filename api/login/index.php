@@ -4,7 +4,6 @@ $data = json_decode(file_get_contents("php://input"));
 
 $users = json_decode(file_get_contents("./../../db/users.json"));
 
-file_put_contents('log.txt', json_encode($data), FILE_APPEND);
 
 $findUser = null;
 

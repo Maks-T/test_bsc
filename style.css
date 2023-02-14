@@ -1,3 +1,19 @@
 * {
   border: 1px dashed greenyellow;
 }
+
+.hide {
+  display: none;
+}
+
+.success {
+  background-color: rgb(102, 158, 17);
+  color: white;
+  font-weight: 700;
+}
+
+.mistake {
+  background-color: rgb(221, 26, 26);
+  color: white;
+  font-weight: 700;
+}
