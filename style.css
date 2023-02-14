@@ -9,8 +9,10 @@ body {
 
 header {
   display: flex;
-  justify-content: flex-end;
-  padding: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.2rem 0.6rem;
   background-color: rgb(42, 138, 247);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.24);
   color: white;
@@ -75,4 +77,23 @@ header {
   background-color: rgb(221, 26, 26);
   color: white;
   font-weight: 700;
+}
+
+#exit {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(./assets/icon/exit.png) no-repeat center;
+  background-size: 100%;
+}
+
+.loginBlock {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.statLink {
+  color: azure;
+  font-size: 0.85rem;
 }

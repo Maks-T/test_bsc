@@ -7,7 +7,7 @@ let data = [];
 let questions = [];
 let verData = 0;
 
-const maxQ = 5; //количество вопросов в билете
+const maxQ = 10; //количество вопросов в билете
 
 if (!userData) {
   window.location.href = './login';
@@ -19,6 +19,7 @@ const userNameElem = document.querySelector('#userName');
 const quesElem = document.querySelector('#ques');
 const answersElem = document.querySelector('#answers');
 const btnNextElem = document.querySelector('#btnNext');
+const exitElem = document.querySelector('#exit');
 
 let countQues = 0;
 let curIndQues = 0;
@@ -50,6 +51,7 @@ window.onload = async function () {
     }
   }
 
+  exitElem.addEventListener('click', clickExit);
   answersElem.addEventListener('click', clickAnswer);
   btnNextElem.addEventListener('click', clickBtnNext);
 
@@ -185,4 +187,11 @@ const getData = async (data) => {
   });
 
   return await response.json();
+};
+
+const clickExit = () => {
+  localStorage.removeItem('user');
+  localStorage.removeItem('verData');
+  localStorage.removeItem('questions');
+  window.location.href = './login';
 };
