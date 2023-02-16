@@ -1,4 +1,7 @@
-const userData = localStorage.getItem('user');
+
+
+const maxQ = 10; //количество вопросов в билете
+
 const URI_DATA = './db/data.json';
 const URI_SAVE_DATA = './api/data/save.php';
 const URI_GET_QUESTIONS = './api/data/getQuestions.php';
@@ -7,11 +10,7 @@ let data = [];
 let questions = [];
 let verData = 0;
 
-const maxQ = 10; //количество вопросов в билете
 
-if (!userData) {
-  window.location.href = './login';
-}
 
 const user = JSON.parse(userData);
 
@@ -193,5 +192,5 @@ const clickExit = () => {
   localStorage.removeItem('user');
   localStorage.removeItem('verData');
   localStorage.removeItem('questions');
-  window.location.href = './login';
+  window.location.href = window.location.origin+'/login/';
 };

@@ -1,6 +1,7 @@
 const form = document.querySelector('#form');
 const URI = './../api/login/index.php';
 
+
 form.addEventListener('submit', submitHandler);
 
 async function submitHandler(e) {
@@ -13,7 +14,7 @@ async function submitHandler(e) {
   if (result.status === 'success') {
     localStorage.setItem('user', JSON.stringify(result.user));
 
-    window.location.href = './../';
+    window.location.href = window.location.origin+'/';
   }
 
   console.log(result);
